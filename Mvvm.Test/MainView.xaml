@@ -1,0 +1,40 @@
+﻿<Window x:Class="Mvvm.Test.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mvvm.Test"
+        mc:Ignorable="d" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" WindowStartupLocation="CenterScreen"
+        Title="MainView" Height="450" Width="800">
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="10" CaptionHeight="40"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Border Margin="7" CornerRadius="8">
+            <Border.Background>
+                <VisualBrush TileMode="Tile" Viewport="0 0 2 2" ViewportUnits="Absolute" Viewbox="0 0 2 2" ViewboxUnits="Absolute">
+                    <VisualBrush.Visual>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1"/>
+                                <ColumnDefinition Width="1"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1"/>
+                                <RowDefinition Height="1"/>
+                            </Grid.RowDefinitions>
+                            <Rectangle Fill="#eeFFFFFF"/>
+                            <Rectangle Fill="#ccFFFFFF" Grid.Row="1"/>
+                            <Rectangle Fill="#ccFFFFFF" Grid.Column="1"/>
+                            <Rectangle Fill="#eeFFFFFF" Grid.Column="1" Grid.Row="1"/>
+                        </Grid>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="7" ShadowDepth="0" Opacity="0.16" Color="Black"/>
+            </Border.Effect>
+        </Border>
+        <ContentControl x:Name="ActiveItem" Margin="8"/>
+    </Grid>
+</Window>

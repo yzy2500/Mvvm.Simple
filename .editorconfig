@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS8612: 类型中引用类型的为 Null 性与隐式实现的成员不匹配。
+dotnet_diagnostic.CS8612.severity = none

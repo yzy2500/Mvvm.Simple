@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Mvvm.Test.TestView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mvvm.Test"
+             mc:Ignorable="d" d:DataContext="{d:DesignInstance Type=local:TestViewModel}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock FontSize="36" FontWeight="Light" FontFamily="华文楷体" Text="{Binding Title}"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Content="轻消息" Width="88" Height="32" Margin="0 50 0 0" Command="{Binding ExtToastTip}"/>
+            <Button Content="对话框" Width="88" Height="32" Margin="0 50 0 0" Command="{Binding ExtMsgDialog}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
